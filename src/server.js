@@ -3,10 +3,29 @@ import cors from 'cors';
 import { supabase } from './config/supabase.js';
 
 const app = express();
-app.use(cors());
 app.use(express.json());
 
-// Rota para listar os últimos 20 livros (Requisito do MVP)
+const cors = require('cors');
+
+const allowedOrigins = [
+  'https://meulivrinho.art.br',
+  'https://www.meulivrinho.art.br',
+  'https://meulivrinho-web.vercel.app',
+  'http://localhost:5173' 
+];
+
+app.use(cors({
+  origin: function (origin, callback) {
+    if (!origin) return callback(null, true);
+    
+    if (allowedOrigins.indexOf(origin) === -1) {
+      const msg = 'A política de CORS para este site não permite acesso da origem especificada.';
+      return callback(new Error(msg), false);
+    }
+    return callback(null, true);
+  }
+}));
+
 app.get('/livros', async (req, res) => {
     const { data, error } = await supabase
         .from('livros')
@@ -15,7 +34,7 @@ app.get('/livros', async (req, res) => {
         .limit(20);
 
     if (error) {
-        console.error("Erro no Supabase:", error); // Isso vai nos dizer o motivo real
+        console.error("Erro no Supabase:", error); 
         return res.status(400).json({ error: error.message });
     }
     return res.json(data);
