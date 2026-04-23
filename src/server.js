@@ -5,8 +5,6 @@ import { supabase } from './config/supabase.js';
 const app = express();
 app.use(express.json());
 
-const cors = require('cors');
-
 const allowedOrigins = [
   'https://meulivrinho.art.br',
   'https://www.meulivrinho.art.br',
@@ -16,11 +14,11 @@ const allowedOrigins = [
 
 app.use(cors({
   origin: function (origin, callback) {
+
     if (!origin) return callback(null, true);
     
     if (allowedOrigins.indexOf(origin) === -1) {
-      const msg = 'A política de CORS para este site não permite acesso da origem especificada.';
-      return callback(new Error(msg), false);
+      return callback(new Error('CORS bloqueado por segurança'), false);
     }
     return callback(null, true);
   }
@@ -41,4 +39,4 @@ app.get('/livros', async (req, res) => {
 });
 
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(`🚀 API rodando em http://localhost:${PORT}`));
+app.listen(PORT, () => console.log(`🚀 API rodando na porta ${PORT}`));
