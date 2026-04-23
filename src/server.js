@@ -9,7 +9,7 @@ const allowedOrigins = [
   'https://meulivrinho.art.br',
   'https://www.meulivrinho.art.br',
   'https://meulivrinho-web.vercel.app',
-  'http://localhost:5173' 
+  'http://localhost:5173'
 ];
 
 app.use(cors({
@@ -17,13 +17,18 @@ app.use(cors({
 
     if (!origin) return callback(null, true);
     
-    if (allowedOrigins.indexOf(origin) === -1) {
-      return callback(new Error('CORS bloqueado por segurança'), false);
-    }
-    return callback(null, true);
-  }
-}));
+    if (allowedOrigins.includes(origin)) {
+      return callback(null, true);
+    } else {
 
+      console.log("Origem bloqueada pelo CORS:", origin);
+      return callback(new Error('Não permitido pelo CORS'), false);
+    }
+  },
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+}));
 app.get('/livros', async (req, res) => {
     const { data, error } = await supabase
         .from('livros')
