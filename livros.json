@@ -1,0 +1,212 @@
+[
+    {
+        "id": 0,
+        "titulo": "A Bruxa e o Caldeirão",
+        "autor": "José Leon Machado",
+        "ano": "",
+        "editora": "Projecto Vercial",
+        "idioma": "português",
+        "url_pdf": "http://www.dominiopublico.gov.br/download/texto/pv00001a.pdf",
+        "capa_url": "abcd.png"
+    },
+    {
+        "id": 1,
+        "titulo": "A borboleta azul",
+        "autor": "Lenira Almeida Heck",
+        "ano": "",
+        "editora": "Editora Univates",
+        "idioma": "português",
+        "url_pdf": "http://www.dominiopublico.gov.br/download/texto/eu000004.pdf",
+        "capa_url": "alfabeto.png"
+    },
+    {
+        "id": 2,
+        "titulo": "Amanda e os Nanorobôs",
+        "autor": "Eliú Quintiliano",
+        "ano": "",
+        "editora": "Edição do Autor",
+        "idioma": "português",
+        "url_pdf": "http://www.dominiopublico.gov.br/download/texto/ea000538.pdf",
+        "capa_url": "blocos-de-brinquedo.png"
+    },
+    {
+        "id": 3,
+        "titulo": "Chuva e sol",
+        "autor": "Adelina Lopes Vieira",
+        "ano": "",
+        "editora": "Wikipédia, a enciclopédia livre",
+        "idioma": "português",
+        "url_pdf": "http://www.dominiopublico.gov.br/download/texto/wk000073.pdf",
+        "capa_url": "brinquedo-de-forma.png"
+    },
+    {
+        "id": 4,
+        "titulo": "Conto ou não conto?",
+        "autor": "Abel Sidney",
+        "ano": "",
+        "editora": "Edição do Autor",
+        "idioma": "português",
+        "url_pdf": "http://www.dominiopublico.gov.br/download/texto/ea000337.pdf",
+        "capa_url": "caixa-de-areia.png"
+    },
+    {
+        "id": 5,
+        "titulo": "Dom Quixote",
+        "autor": "Adelina Lopes Vieira",
+        "ano": "",
+        "editora": "Wikipédia, a enciclopédia livre",
+        "idioma": "português",
+        "url_pdf": "http://www.dominiopublico.gov.br/download/texto/wk000074.pdf",
+        "capa_url": "canvas.png"
+    },
+    {
+        "id": 6,
+        "titulo": "Eu que vi, eu que vi",
+        "autor": "Devison Amorim do Nascimento",
+        "ano": "",
+        "editora": "Edição do Autor",
+        "idioma": "português",
+        "url_pdf": "http://www.dominiopublico.gov.br/download/texto/ea000402.pdf",
+        "capa_url": "coracoeszinhos.png"
+    },
+    {
+        "id": 7,
+        "titulo": "Histórias da Avózinha",
+        "autor": "Alberto Figueiredo Pimentel",
+        "ano": "",
+        "editora": "Fundação Biblioteca Nacional",
+        "idioma": "português",
+        "url_pdf": "http://www.dominiopublico.gov.br/download/texto/bn000137.pdf",
+        "capa_url": "crocodilo.png"
+    },
+    {
+        "id": 8,
+        "titulo": "Histórias que acabam aqui",
+        "autor": "Maria Teresa Lobato Fernandes Pereira Lopes",
+        "ano": "",
+        "editora": "Edição do Autor",
+        "idioma": "português",
+        "url_pdf": "http://www.dominiopublico.gov.br/download/texto/ea000115.pdf",
+        "capa_url": "desenho-infantil(1).png"
+    },
+    {
+        "id": 9,
+        "titulo": "Meiguice",
+        "autor": "Adelina Lopes Vieira",
+        "ano": "",
+        "editora": "Wikipédia, a enciclopédia livre",
+        "idioma": "português",
+        "url_pdf": "http://www.dominiopublico.gov.br/download/texto/wk000075.pdf",
+        "capa_url": "desenho-infantil.png"
+    },
+    {
+        "id": 10,
+        "titulo": "No reino das letras felizes",
+        "autor": "Lenira Almeida Heck",
+        "ano": "",
+        "editora": "Editora Univates",
+        "idioma": "português",
+        "url_pdf": "http://www.dominiopublico.gov.br/download/texto/eu00005a.pdf",
+        "capa_url": "draw (1).png"
+    },
+    {
+        "id": 11,
+        "titulo": "Não se perde nada à mesa",
+        "autor": "Adelina Lopes Vieira",
+        "ano": "",
+        "editora": " Wikipédia, a enciclopédia livre",
+        "idioma": "português",
+        "url_pdf": "http://www.dominiopublico.gov.br/download/texto/wk000076.pdf",
+        "capa_url": "draw.png"
+    },
+    {
+        "id": 12,
+        "titulo": "O galo Tião e a dinda Raposa",
+        "autor": "Lenira Almeida Heck",
+        "ano": "",
+        "editora": "Editora Univates",
+        "idioma": "português",
+        "url_pdf": "http://www.dominiopublico.gov.br/download/texto/eu00001a.pdf",
+        "capa_url": "fadinhas.png"
+    },
+    {
+        "id": 13,
+        "titulo": "O galo Tião e a vaca Malhada",
+        "autor": "Lenira Almeida Heck",
+        "ano": "",
+        "editora": "Editora Univates",
+        "idioma": "português",
+        "url_pdf": "http://www.dominiopublico.gov.br/download/texto/eu00003a.pdf",
+        "capa_url": "father.png"
+    },
+    {
+        "id": 14,
+        "titulo": "O leão Praxedes",
+        "autor": "Tarcisio Lage",
+        "ano": "",
+        "editora": "Edição do Autor",
+        "idioma": "português",
+        "url_pdf": "http://www.dominiopublico.gov.br/download/texto/ea000464.pdf",
+        "capa_url": "leao.png"
+    },
+    {
+        "id": 15,
+        "titulo": "O mistério do anel de pérola",
+        "autor": "Lenira Almeida Heck",
+        "ano": "",
+        "editora": "Editora Univates",
+        "idioma": "português",
+        "url_pdf": "http://www.dominiopublico.gov.br/download/texto/eu000006.pdf",
+        "capa_url": "ilustracao.png"
+    },
+    {
+        "id": 16,
+        "titulo": "O pacto maldito e outras histórias de morte",
+        "autor": "José Cláudio da Silva",
+        "ano": "",
+        "editora": "Edição do Autor",
+        "idioma": "português",
+        "url_pdf": "http://www.dominiopublico.gov.br/download/texto/ea000418.pdf",
+        "capa_url": "game-boy.png"
+    },
+    {
+        "id": 17,
+        "titulo": "O peixinho e o gato",
+        "autor": "Lenira Almeida Heck",
+        "ano": "",
+        "editora": "Editora Univates",
+        "idioma": "português",
+        "url_pdf": "http://www.dominiopublico.gov.br/download/texto/eu00002b.pdf.pdf",
+        "capa_url": "nuvemdearcoiris.png"
+    },
+    {
+        "id": 18,
+        "titulo": "O ramo verde",
+        "autor": "Adelina Lopes Vieira",
+        "ano": "",
+        "editora": "Wikipédia, a enciclopédia livre",
+        "idioma": "português",
+        "url_pdf": "http://www.dominiopublico.gov.br/download/texto/wk000077.pdf",
+        "capa_url": "playground.png"
+    },
+    {
+        "id": 19,
+        "titulo": "O ratinho Rói-Rói",
+        "autor": "Lenira Almeida Heck",
+        "ano": "",
+        "editora": "Editora Univates",
+        "idioma": "português",
+        "url_pdf": "http://www.dominiopublico.gov.br/download/texto/eu00007a.pdf",
+        "capa_url": "selva.png"
+    },
+    {
+        "id": 20,
+        "titulo": "Pai, posso dar um soco nele?",
+        "autor": "José Cláudio da Silva",
+        "ano": "",
+        "editora": "Edição do Auto",
+        "idioma": "português",
+        "url_pdf": "http://www.dominiopublico.gov.br/download/texto/ea000419.pdf",
+        "capa_url": "unicornio.png"
+    }
+]
