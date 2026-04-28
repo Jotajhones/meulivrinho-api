@@ -1,6 +1,6 @@
 import express from 'express';
 import cors from 'cors';
-import { supabase } from './config/supabase.js';
+import livroRoutes from './routes/livroRoutes.js';
 
 const app = express();
 app.use(express.json());
@@ -13,35 +13,20 @@ const allowedOrigins = [
 ];
 
 app.use(cors({
-  origin: function (origin, callback) {
-
+  origin: (origin, callback) => {
     if (!origin) return callback(null, true);
-    
     if (allowedOrigins.includes(origin)) {
-      return callback(null, true);
+      callback(null, true);
     } else {
-
-      console.log("Origem bloqueada pelo CORS:", origin);
-      return callback(new Error('Não permitido pelo CORS'), false);
+      callback(new Error('Acesso não autorizado por política de CORS'));
     }
   },
-  credentials: true,
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization']
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true
 }));
-app.get('/livros', async (req, res) => {
-    const { data, error } = await supabase
-        .from('livros')
-        .select('*')
-        .order('created_at', { ascending: false })
-        .limit(20);
 
-    if (error) {
-        console.error("Erro no Supabase:", error); 
-        return res.status(400).json({ error: error.message });
-    }
-    return res.json(data);
-});
+// Delegando as rotas para o roteador específico
+app.use('/livros', livroRoutes);
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`🚀 API rodando na porta ${PORT}`));
