@@ -3,8 +3,10 @@ import { livroService } from '../services/livroService.js';
 export const livroController = {
     async index(req, res) {
         try {
-            const { page, search } = req.query;
-            const result = await livroService.getAll(Number(page) || 1, search);
+            const { page, search, sort } = req.query;
+
+            const result = await livroService.getAll(Number(page) || 1, search, sort);
+
             return res.json(result);
         } catch (error) {
             return res.status(500).json({ error: 'Erro ao buscar livros', details: error.message });
@@ -49,5 +51,5 @@ export const livroController = {
             return res.status(400).json({ error: 'Erro ao deletar livro' });
         }
     }
-    
+
 };

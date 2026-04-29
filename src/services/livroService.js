@@ -1,28 +1,48 @@
 import { supabase } from '../config/supabase.js';
 
 export const livroService = {
-    async getAll(page = 1, search = '') {
-        const limit = 20;
+    
+    async getAll(page = 1, search = '', sort = 'recent') {
+        const limit = 8;
         const from = (page - 1) * limit;
         const to = from + limit - 1;
 
         let query = supabase
             .from('livros')
-            .select('*', { count: 'exact' })
-            .order('titulo', { ascending: true })
-            .range(from, to);
+            .select('*', { count: 'exact' });
+
 
         if (search) {
-            query = query.or(`titulo.ilike.%${search}%,autor.ilike.%${search}%`);
+            query = query.ilike('titulo', `%${search}%`);
         }
 
-        const { data, error, count } = await query;
+
+        switch (sort) {
+            case 'az':
+                query = query.order('titulo', { ascending: true });
+                break;
+            case 'za':
+                query = query.order('titulo', { ascending: false });
+                break;
+            case 'year':
+
+                query = query.order('ano', { ascending: false });
+                break;
+            case 'recent':
+            default:
+
+                query = query.order('created_at', { ascending: false });
+                break;
+        }
+
+        const { data, count, error } = await query.range(from, to);
+
         if (error) throw error;
 
         return {
-            data,
-            total: count,
-            hasMore: count > to
+            books: data,
+            totalPages: Math.ceil(count / limit),
+            currentPage: page
         };
     },
 
